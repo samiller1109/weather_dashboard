@@ -120,4 +120,4 @@ A minimal Flask-based Weather Dashboard that pulls current weather and a 5-day f
    ---
 
 ## 📄 License
-This project is MIT-licensed. See [LICENSE](https://github.com/samiller1109/weather_dashboard/tree/main?tab=MIT-1-ov-file) for details.
+This project is MIT-licensed. See [LICENSE](https://github.com/samiller1109/weather_dashboard/blob/main/LICENSE) for details.
