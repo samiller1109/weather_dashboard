@@ -1,32 +1,51 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <form method="POST" class="form-inline text-center" style="margin: 20px 0;">
-    <div class="form-group">
-      <input type="text" name="city" class="form-control" placeholder="Enter city name" required>
-    </div>
+  <form method="POST" class="d-flex justify-content-center my-4">
+    <input
+      type="text"
+      name="city"
+      class="form-control me-2"
+      placeholder="Enter city name"
+      required
+      style="max-width: 300px;"
+    />
     <button type="submit" class="btn btn-primary">Get Weather</button>
   </form>
 
   {% if weather %}
-    <div class="row text-center weather-box">
-      <h2>{{ weather.city }}, {{ weather.country }}</h2>
-      <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="{{ weather.description }}">
-      <h3>{{ weather.temp }}°C</h3>
-      <p>{{ weather.description }}</p>
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 weather-box text-center">
+        <h2>{{ weather.city }}, {{ weather.country }}</h2>
+        <img
+          src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png"
+          alt="{{ weather.description }}"
+        />
+        <h3>{{ weather.temp }}°C</h3>
+        <p class="mb-1">{{ weather.description }}</p>
+        <small>
+          Feels like {{ weather.feels_like }}°C ·
+          Humidity {{ weather.humidity }}% ·
+          Wind {{ weather.wind_speed }} m/s ·
+          Pressure {{ weather.pressure }} hPa
+        </small>
+      </div>
     </div>
   {% endif %}
 
   {% if forecast %}
-  <div class="row forecast-row">
-    {% for day in forecast %}
-      <div class="col-xs-2 forecast-card">
-        <p>{{ day.date }}</p>
-        <img src="https://openweathermap.org/img/wn/{{ day.icon }}.png" alt>
-        <p>{{ day.min }}° / {{ day.max }}°</p>
-        <small>{{ day.desc }}</small>
-      </div>
-    {% endfor %}
-  </div>
-{% endif %}
+    <div class="row justify-content-center mt-4 forecast-row">
+      {% for day in forecast %}
+        <div class="col-2 forecast-card text-center">
+          <p class="mb-1">{{ day.date }}</p>
+          <img
+            src="https://openweathermap.org/img/wn/{{ day.icon }}.png"
+            alt="{{ day.desc }}"
+          />
+          <p class="mb-1">{{ day.min }}° / {{ day.max }}°</p>
+          <small>{{ day.desc }}</small>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endblock %}
