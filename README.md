@@ -29,9 +29,10 @@ A minimal Flask-based Weather Dashboard that pulls current weather and a 5-day f
    git clone https://github.com/your-username/weather-dashboard.git
    cd weather-dashboard
 2. **Create a virtual environment**
-   '''python3 -m venv venv
+   '''bash
+   python3 -m venv venv
    source venv/bin/activate      # Linux/macOS
-   venv\Scripts\activate         # Windows'''
+   venv\Scripts\activate         # Windows
   
      
 4. **Install dependencies**
