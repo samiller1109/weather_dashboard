@@ -16,4 +16,17 @@
       <p>{{ weather.description }}</p>
     </div>
   {% endif %}
+
+  {% if forecast %}
+  <div class="row forecast-row">
+    {% for day in forecast %}
+      <div class="col-xs-2 forecast-card">
+        <p>{{ day.date }}</p>
+        <img src="https://openweathermap.org/img/wn/{{ day.icon }}.png" alt>
+        <p>{{ day.min }}° / {{ day.max }}°</p>
+        <small>{{ day.desc }}</small>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
 {% endblock %}
