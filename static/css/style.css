@@ -1,7 +1,22 @@
+body {
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  min-height: 100vh;
+}
 .weather-box {
-  background: #f0f8ff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.forecast-row {
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+.forecast-card {
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.25rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
