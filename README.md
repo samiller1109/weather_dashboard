@@ -28,3 +28,20 @@ A minimal Flask-based Weather Dashboard that pulls current weather and a 5-day f
    ```bash
    git clone https://github.com/your-username/weather-dashboard.git
    cd weather-dashboard
+2. **Create a virtual environment**
+   python3 -m venv venv
+   source venv/bin/activate      # Linux/macOS
+   venv\Scripts\activate         # Windows
+  
+     
+4. **Install dependencies**
+   pip install -r requirements.txt
+
+6. **Environment variables**
+   - Create a .env file in the project root with:
+     OWM_API_KEY=your_openweathermap_api_key
+     FLASK_SECRET_KEY=your_flask_secret_key
+   -Or copy the example:
+    cp .env.example .env
+
+## ▶️ Running Locally
