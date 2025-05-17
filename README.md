@@ -26,7 +26,7 @@ A minimal Flask-based Weather Dashboard that pulls current weather and a 5-day f
 
 1. **Clone this repository**
    ```shell
-   git clone https://github.com/your-username/weather-dashboard.git
+   git clone https://github.com/samiller1109/weather-dashboard.git
    cd weather-dashboard
    ```
    
